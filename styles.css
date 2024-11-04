@@ -1,0 +1,283 @@
+/* Sayfanın tamamına arka plan resmi */
+body {
+    background-image: url('bbg.jpg'); /* Arka plan resmi */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.header-title {
+    font-size: 2em;
+    font-weight: bold; 
+    margin: 0;
+}
+
+.contact-info {
+    margin-top: 10px; /* Buton ile LinkedIn bilgisi arasında boşluk */
+    text-align: center; /* Ortalamak için */
+}
+
+.contact-btn {
+    background-color: #5cbdbb; /* Butonun arka plan rengi */
+    color: white; /* Buton üzerindeki yazının rengi */
+    border: none; /* Kenarlık kaldırıldı */
+    border-radius: 5px; /* Köşeler yuvarlatıldı */
+    padding: 10px 20px; /* İç boşluklar */
+    text-decoration: none; /* Altı çizgi kaldırıldı */
+    transition: transform 0.2s; /* Geçiş efekti */
+    display: inline-block; /* Buton gibi görünmesi için */
+}
+
+.contact-btn:hover {
+    transform: scale(1.05); /* Hover olduğunda büyüme efekti */
+    background-color: #4a9b9c; /* Hover rengi değişimi */
+}
+
+
+.linkedin-info {
+    font-size: 12px; /* Küçük font boyutu */
+    margin-top: 5px; /* Üstten boşluk */
+}
+
+.linkedin-link {
+    color: #0077b5; /* LinkedIn'in mavi rengi */
+    text-decoration: none; /* Alt çizgi yok */
+    display: flex; /* İkon ve metni yan yana hizalamak için */
+    align-items: center; /* İkon ve metni ortala */
+}
+
+.linkedin-link i {
+    margin-right: 5px; /* İkon ile metin arasındaki boşluk */
+}
+
+.linkedin-link:hover {
+    color: white; /* Hover rengi */
+}
+
+
+/* SEO İçeriği */
+.seo-content {
+    text-align: right;
+    margin-top: 0;
+    padding: 10px 20px;
+    color: black;
+}
+
+.seo-content p {
+    font-size: large;
+    font-weight: bold; /* Metni kalın yapar */
+}
+
+.app-links {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.app-link {
+    margin: 0 10px;
+    animation: circle-jump 1.5s infinite; /* Hızlı zıplama animasyonu */
+}
+
+.app-links a {
+    color: white; /* Metin rengi beyaz */
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: #5cbdbb; /* Arka plan rengi */
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex; /* İkon ve metni yan yana hizalamak için */
+    align-items: center; /* İkon ve metni ortala */
+    transition: background-color 0.3s, color 0.3s; /* Geçiş efekti */
+}
+
+/* İkon rengi */
+.app-links a i {
+    color: white; /* İkon rengi */
+    margin-right: 8px; /* İkon ile metin arasındaki boşluk */
+}
+
+.app-links a:hover {
+    background-color: white;
+    color: #5cbdbb;
+}
+
+.app-links a:hover i {
+    color: #5cbdbb; /* İkon rengi yazı rengi ile aynı olacak */
+    transform: scale(1.5); /* İkon hover olduğunda büyüme efekti */
+}
+
+@keyframes circle-jump {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(5px, -10px);
+    }
+    50% {
+        transform: translate(0, -20px);
+    }
+    75% {
+        transform: translate(-5px, -10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Ekran 425 piksel altına düştüğünde düzenleme */
+@media (max-width: 425px) {
+    .app-links {
+        flex-direction: column; /* Dikey sıralama */
+        align-items: center; /* Ortala */
+        gap: 10px; /* Boşluk azaltıldı */
+    }
+
+    .app-links a {
+        width: 100%; /* Bağlantıların genişliğini %100 yap */
+        text-align: center; /* Metni ortala */
+    }
+}
+
+
+/* Ana içerik */
+.content {
+    margin: 0; /* Üstten boşluğu sıfırlayın */
+    padding: 0; /* İsterseniz iç boşluğu da sıfırlayın */
+}
+
+
+/* Arama Çubuğu Tasarımı */
+.search-container {
+    background: #fff;
+    height: 50px; /* Yükseklik ayarlandı */
+    border-radius: 30px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+                -4px -4px 6px 0 rgba(116, 125, 136, 0.2), 
+                inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+                inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+    position: relative; /* Pozisyonlama için relative kullanıldı */
+    margin-top: 20px; /* Yukarıdan boşluk bırakıldı */
+    margin-left: 40px; /* Arama çubuğuna sol taraftan boşluk verir */
+    width: 150px; /* Başlangıçta küçük boyut */
+    transition: width 0.3s ease; /* Genişleme animasyonu */
+}
+
+/* Küçük ekranlar için arama çubuğu konumlandırması */
+@media (max-width: 600px) {
+    .search-container {
+        width: calc(100% - 40px); /* Ekranın genişliğine göre ayarlandı */
+        margin: 10px 20px; /* Ekranda iyi görünmesi için marj eklendi */
+    }
+}
+
+/* Arama Çubuğu Genişleme Efekti */
+.search-container:hover {
+    width: 400px; /* Üzerine gelindiğinde genişleme boyutu */
+}
+
+/* Arama Butonu */
+.search-btn .fas {
+    color: #5cbdbb;
+}
+
+/* Sallanma efekti */
+@keyframes hoverShake {
+    0% { transform: skew(0deg, 0deg); }
+    25% { transform: skew(5deg, 5deg); }
+    75% { transform: skew(-5deg, -5deg); }
+    100% { transform: skew(0deg, 0deg); }
+}
+
+.search-container:hover {
+    animation: hoverShake 0.15s linear 3;
+}
+
+/* Arama Çubuğu Genişliği için geçiş efekti */
+.search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%; /* Her zaman tam genişlikte */
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+#results {
+    margin-top: 10px;
+    margin-left: 40px; /* Arama çubuğuna sol taraftan boşluk verir */
+    text-align: left;
+    max-width: 400px; /* Genişliği sınırla */
+    left: 20px; /* Sol tarafa hizalandı */
+}
+
+.result-item {
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    margin: 5px 0;
+}
+
+.result-item:hover {
+    background-color: #e0f7ea; /* Hover etkisi */
+}
+
+
+/* Açıklama kısmı stili */
+#explanation {
+    margin-top: 20px;
+    text-align: left;
+    padding: 20px;
+    width: 80%; /* Genişliği artırın */
+    max-width: 800px; /* Genişliği sınırlayın */
+    clear: both; /* Üst öğelerden bağımsız görünmesi için */
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+
+.explanation-container {
+    margin-top: 20px;
+    background-color: #5cbdbb; 
+    padding: 2px; 
+    border-radius: 8px; 
+    user-select: none; /* Metnin seçilmesini engelle */
+}
+
+.explanation-inner {
+    background-color: white; 
+    padding: 15px; 
+    border-radius: 8px; 
+    color: black; 
+    font-size: 1.3em; 
+}
+
+
+.term-count {
+    font-size: 0.6em; /* Daha küçük bir font boyutu */
+    color: #666; /* İsterseniz farklı bir renk de seçebilirsiniz */
+    margin-left: 10px; /* Başlık ile yazı arasında biraz boşluk */
+}

@@ -84,6 +84,10 @@ function showExplanation(item) {
 
 // Arama çubuğuna odaklanma olayını dinleyin
 searchBar.addEventListener('focus', function() {
+    window.scrollTo({
+        top: 0, // En üste kaydır
+        behavior: "smooth" // Kayma efekti
+    });
     // Açıklamayı gizle
     explanationDiv.innerHTML = ""; // Açıklamayı temizle
     explanationDiv.style.display = 'none'; // Açıklamayı gizle

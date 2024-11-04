@@ -158,6 +158,8 @@ body {
 .content {
     margin: 0; /* Üstten boşluğu sıfırlayın */
     padding: 0; /* İsterseniz iç boşluğu da sıfırlayın */
+    padding-top: 20px; /* Üst boşluk */
+
 }
 
 
@@ -177,6 +179,7 @@ body {
     position: relative; /* Pozisyonlama için relative kullanıldı */
     margin-top: 20px; /* Yukarıdan boşluk bırakıldı */
     margin-left: 40px; /* Arama çubuğuna sol taraftan boşluk verir */
+    margin-bottom: 10px; /* Arama çubuğu ve sonuç listesi arasında boşluk */
     width: 150px; /* Başlangıçta küçük boyut */
     transition: width 0.3s ease; /* Genişleme animasyonu */
 }

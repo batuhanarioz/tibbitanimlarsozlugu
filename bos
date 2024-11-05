@@ -1,56 +1,43 @@
-/* Arama Çubuğu Tasarımı */
-.search-container {
-    background: #fff;
-    height: 30px;
-    width: 40px; /* Daraltıldı */
-    border-radius: 30px;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: width 0.5s, padding 0.5s;
-    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
-                -4px -4px 6px 0 rgba(116, 125, 136, 0.2), 
-                inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
-                inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-    position: absolute;
-    left: 20px; /* Sol tarafa hizalandı */
-    top: 120px; /* Başlığın altında konumlandırıldı */
-}
 
-/* Arama Çubuğu Geçiş ve Genişleme Efekti */
-.search-container:hover, .search-container:focus-within {
-    width: 250px; /* Hover veya focus ile genişletildi */
-    padding: 5px 15px; /* İç boşluk artırıldı */
-}
 
-.search-input {
-    background: transparent;
-    border: none;
-    outline: none;
-    width: 0;
-    font-weight: 500;
-    font-size: 16px;
-    transition: width 0.5s;
-}
 
-/* Arama Çubuğu için Genişleme */
-.search-container:hover .search-input,
-.search-container:focus-within .search-input {
-    width: 200px; /* Arama alanı genişliyor */
-}
 
-.search-btn .fas {
-    color: #5cbdbb;
-}
 
-@keyframes hoverShake {
-    0% { transform: skew(0deg, 0deg); }
-    25% { transform: skew(5deg, 5deg); }
-    75% { transform: skew(-5deg, -5deg); }
-    100% { transform: skew(0deg, 0deg); }
-}
 
-.search-container:hover {
-    animation: hoverShake 0.15s linear 3;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

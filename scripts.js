@@ -81,7 +81,6 @@ function showExplanation(item) {
     explanationDiv.style.display = 'block';
 }
 
-
 // Arama çubuğuna odaklanma olayını dinleyin
 searchBar.addEventListener('focus', function() {
     window.scrollTo({
@@ -92,3 +91,56 @@ searchBar.addEventListener('focus', function() {
     explanationDiv.innerHTML = ""; // Açıklamayı temizle
     explanationDiv.style.display = 'none'; // Açıklamayı gizle
 });
+
+
+document.getElementById("chatbot-open-btn").addEventListener("click", function() {
+    document.getElementById("chatbox").style.display = "flex";
+    document.getElementById("chatbot-open-btn").classList.add("hidden"); // Buton yazısını gizle
+});
+
+document.getElementById("chatbox-close-btn").addEventListener("click", function() {
+    document.getElementById("chatbox").style.display = "none";
+    document.getElementById("chatbot-open-btn").classList.remove("hidden"); // Buton yazısını göster
+});
+
+const messagesDiv = document.getElementById("chatbox-messages");
+const userInput = document.getElementById("user-input");
+
+userInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        const userMessage = userInput.value.trim();
+        if (userMessage) {
+            displayMessage(userMessage, "user-message");
+            botResponse(userMessage);
+            userInput.value = "";
+        }
+    }
+});
+
+function displayMessage(text, className) {
+    const messageDiv = document.createElement("div");
+    messageDiv.className = className;
+    messageDiv.innerHTML = text; // Mesaj içeriğini HTML olarak ayarlayın
+    messagesDiv.appendChild(messageDiv);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight; // Mesaj kutusunu en alta kaydır
+}
+
+function botResponse(userMessage) {
+    let response;
+    const lowerMessage = userMessage.toLowerCase();
+
+    // Cevaplar
+    if (lowerMessage.includes("android")) {
+        response = 'Android uygulamamıza buradan ulaşabilirsiniz: <a href="https://apps.apple.com/tr/app/t%C4%B1bbi-tan%C4%B1mlar-s%C3%B6zl%C3%BC%C4%9F%C3%BC/id6503453705?l=tr" target="_blank">Tıbbi Tanımlar Sözlüğü</a>';
+    } else if (lowerMessage.includes("ios")) {
+        response = 'iOS uygulamamıza buradan ulaşabilirsiniz: <a href="https://apps.apple.com/tr/app/t%C4%B1bbi-tan%C4%B1mlar-s%C3%B6zl%C3%BC%C4%9F%C3%BC/id6503453705?l=tr" target="_blank">Tıbbi Tanımlar Sözlüğü</a>';
+    } else if (lowerMessage.includes("destek") || lowerMessage.includes("iletişim")) {
+        response = 'Destek için bize email atabilirsiniz: <a href="mailto:tibbitanimlarsozlugu@gmail.com">tibbitanimlarsozlugu@gmail.com</a>';
+    } else if (lowerMessage.includes("batu")) {
+        response = 'İşte Linkedin Hesabım: <a href="https://www.linkedin.com/in/batuhanarioz" target="_blank">Batuhan ARIÖZ</a>';
+    } else {
+        response = "Üzgünüm, bu soruya yanıt veremiyorum. Başka bir konuda yardımcı olabilir miyim?";
+    }
+
+    displayMessage(response, "bot-message");
+}

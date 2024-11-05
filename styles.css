@@ -284,3 +284,103 @@ body {
     color: #666; /* İsterseniz farklı bir renk de seçebilirsiniz */
     margin-left: 10px; /* Başlık ile yazı arasında biraz boşluk */
 }
+
+
+.hidden {
+    display: none;
+}
+
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#chatbot-open-btn {
+    background-color: #5cbdbb;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#chatbox {
+    width: 300px;
+    height: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    position: relative;
+}
+
+#chatbox-header {
+    background-color: #5cbdbb;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#chatbox-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto; /* Taşan mesajlar için kaydırma çubuğu ekler */
+    scroll-behavior: smooth; /* Kaydırma işlemi için yumuşak geçiş */
+}
+
+#user-input {
+    padding: 10px;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 10px 10px;
+    outline: none;
+    font-size: 14px;
+    position: relative; /* Gövde içinde pozisyonlamayı sağlar */
+}
+
+.user-message, .bot-message {
+    max-width: 80%;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+/* Kullanıcı mesajı stili */
+.user-message {
+    background-color: #5cbdbb;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    text-align: left;
+}
+
+/* Bot mesajı stili */
+.bot-message {
+    background-color: #e0e0e0;
+    color: #333;
+    align-self: flex-start;
+    margin-right: auto;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+

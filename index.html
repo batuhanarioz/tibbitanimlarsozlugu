@@ -42,7 +42,10 @@
       </h1>
       <!-- <img src="logo.png" alt="Logo" class="logo">  -->
       <div class="contact-info">
-        <a href="mailto:tibbitanimlarsozlugu@gmail.com" class="contact-btn"
+        <a
+          href="mailto:tibbitanimlarsozlugu@gmail.com"
+          class="contact-btn"
+          onclick="gtag('event', 'click', {'event_category': 'contact', 'event_label': 'İletişim Butonu Tıklama'});"
           >İletişim</a
         >
         <div class="linkedin-info">
@@ -50,6 +53,7 @@
             href="https://www.linkedin.com/in/batuhanarioz"
             target="_blank"
             class="linkedin-link"
+            onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'LinkedIn Bağlantısı Tıklama'});"
           >
             <i class="fab fa-linkedin"></i>
             batuhanarioz
@@ -72,18 +76,20 @@
             href="https://play.google.com/store/apps/details?id=YOUR_APP_PACKAGE_NAME"
             class="app-link"
             target="_blank"
+            onclick="gtag('event', 'click', {'event_category': 'app_download', 'event_label': 'Android Uygulama İndirme'});"
           >
             <i class="fab fa-android"></i>
-            Android Uygulaması</a
-          >
+            Android Uygulaması
+          </a>
           <a
             href="https://apps.apple.com/tr/app/t%C4%B1bbi-tan%C4%B1mlar-s%C3%B6zl%C3%BC%C4%9F%C3%BC/id6503453705?l=tr"
             class="app-link"
             target="_blank"
+            onclick="gtag('event', 'click', {'event_category': 'app_download', 'event_label': 'iOS Uygulama İndirme'});"
           >
             <i class="fab fa-apple"></i>
-            iOS Uygulaması</a
-          >
+            iOS Uygulaması
+          </a>
         </div>
       </div>
       <!-- Arama İkonu ve Arama Çubuğu -->
@@ -95,7 +101,11 @@
           placeholder="Ara.."
           class="search-input"
         />
-        <a href="#" class="search-btn">
+        <a
+          href="#"
+          class="search-btn"
+          onclick="gtag('event', 'click', {'event_category': 'search', 'event_label': 'Arama Butonu Tıklama'});"
+        >
           <i class="fas fa-search"></i>
         </a>
       </div>
@@ -105,7 +115,12 @@
     <div id="explanation"></div>
 
     <div id="chatbot">
-      <button id="chatbot-open-btn">💬 Yardım</button>
+      <button
+        id="chatbot-open-btn"
+        onclick="gtag('event', 'click', {'event_category': 'chatbot', 'event_label': 'Chatbot Açma'});"
+      >
+        💬 Yardım
+      </button>
       <div id="chatbox" style="display: none">
         <div id="chatbox-header">
           <span>Chat Bot</span>

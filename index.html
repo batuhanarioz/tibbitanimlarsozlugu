@@ -1,83 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tıbbi Tanımlar Sözlüğü</title>
-    <link rel="icon" sizes="16x16" href="image/favicon-16x16.png">
-    <link rel="icon" sizes="32x32" href="image/favicon-32x32.png">
-    <link rel="icon" sizes="192x192" href="image/android-chrome-192x192.png">
-    <link rel="icon" sizes="512x512" href="image/android-chrome-512x512.png">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="icon" sizes="16x16" href="image/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" href="image/favicon-32x32.png" />
+    <link rel="icon" sizes="192x192" href="image/android-chrome-192x192.png" />
+    <link rel="icon" sizes="512x512" href="image/android-chrome-512x512.png" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HMVTPNKM73"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-HMVTPNKM73");
+    </script>
+  </head>
+  <body>
     <!-- Header -->
     <header class="header">
-        <h1 class="header-title">Tıbbi Tanımlar Sözlüğü
-            <span class="term-count">6000+ Terim</span>
-        </h1>
-        <!-- <img src="logo.png" alt="Logo" class="logo">  -->
-        <div class="contact-info">
-            <a href="mailto:tibbitanimlarsozlugu@gmail.com" class="contact-btn">İletişim</a>
-            <div class="linkedin-info">
-                <a href="https://www.linkedin.com/in/batuhanarioz" target="_blank" class="linkedin-link">
-                    <i class="fab fa-linkedin"></i>
-                    batuhanarioz
-                </a>
-            </div>
+      <h1 class="header-title">
+        Tıbbi Tanımlar Sözlüğü
+        <span class="term-count">6000+ Terim</span>
+      </h1>
+      <!-- <img src="logo.png" alt="Logo" class="logo">  -->
+      <div class="contact-info">
+        <a href="mailto:tibbitanimlarsozlugu@gmail.com" class="contact-btn"
+          >İletişim</a
+        >
+        <div class="linkedin-info">
+          <a
+            href="https://www.linkedin.com/in/batuhanarioz"
+            target="_blank"
+            class="linkedin-link"
+          >
+            <i class="fab fa-linkedin"></i>
+            batuhanarioz
+          </a>
         </div>
-            </header>
+      </div>
+    </header>
 
-    
-
-<!-- Ana içerik -->
-<section class="content">
-    <!-- SEO Yazısı ve Uygulama Linkleri -->
-    <div class="seo-content">
+    <!-- Ana içerik -->
+    <section class="content">
+      <!-- SEO Yazısı ve Uygulama Linkleri -->
+      <div class="seo-content">
         <p>"NEDİR TIP" diye aratmaktan yoruldun mu?</p>
-        <p>Mobil uygulamamızı indirerek istediğin sonuçlara kolayca ulaşabilirsin!</p>
+        <p>
+          Mobil uygulamamızı indirerek istediğin sonuçlara kolayca
+          ulaşabilirsin!
+        </p>
         <div class="app-links">
-            <a href="https://play.google.com/store/apps/details?id=YOUR_APP_PACKAGE_NAME" class="app-link" target="_blank">
-                <i class="fab fa-android"></i>
-                Android Uygulaması</a>
-            <a href="https://apps.apple.com/tr/app/t%C4%B1bbi-tan%C4%B1mlar-s%C3%B6zl%C3%BC%C4%9F%C3%BC/id6503453705?l=tr" class="app-link" target="_blank">
-                <i class="fab fa-apple"></i>
-                iOS Uygulaması</a>
+          <a
+            href="https://play.google.com/store/apps/details?id=YOUR_APP_PACKAGE_NAME"
+            class="app-link"
+            target="_blank"
+          >
+            <i class="fab fa-android"></i>
+            Android Uygulaması</a
+          >
+          <a
+            href="https://apps.apple.com/tr/app/t%C4%B1bbi-tan%C4%B1mlar-s%C3%B6zl%C3%BC%C4%9F%C3%BC/id6503453705?l=tr"
+            class="app-link"
+            target="_blank"
+          >
+            <i class="fab fa-apple"></i>
+            iOS Uygulaması</a
+          >
         </div>
-    </div>
-    <!-- Arama İkonu ve Arama Çubuğu -->
-    <div class="search-container">
-        <input type="text" id="search-bar" name="search" placeholder="Ara.." class="search-input">
+      </div>
+      <!-- Arama İkonu ve Arama Çubuğu -->
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-bar"
+          name="search"
+          placeholder="Ara.."
+          class="search-input"
+        />
         <a href="#" class="search-btn">
-            <i class="fas fa-search"></i>
+          <i class="fas fa-search"></i>
         </a>
-    </div>
-    <div id="results"></div>
-</section>
+      </div>
+      <div id="results"></div>
+    </section>
 
-<div id="explanation"></div>
+    <div id="explanation"></div>
 
-
-
-<div id="chatbot">
-    <button id="chatbot-open-btn">💬 Yardım</button>
-    <div id="chatbox" style="display: none;">
+    <div id="chatbot">
+      <button id="chatbot-open-btn">💬 Yardım</button>
+      <div id="chatbox" style="display: none">
         <div id="chatbox-header">
-            <span>Chat Bot</span>
-            <button id="chatbox-close-btn">X</button>
+          <span>Chat Bot</span>
+          <button id="chatbox-close-btn">X</button>
         </div>
         <div id="chatbox-messages">
-            <div class="bot-message">Tıbbi Tanımlar Sözlüğü'ne Hoş Geldiniz! <br> Mobil Uygulamalarımıza erişmek için "android" ya da "ios" yazarak linklerimize ulaşabilirsiniz! <br> Eğer desteğe ihtiyacınız varsa "destek" yazarak yardım alabilirsiniz.</div>
+          <div class="bot-message">
+            Tıbbi Tanımlar Sözlüğü'ne Hoş Geldiniz! <br />
+            Mobil Uygulamalarımıza erişmek için "android" ya da "ios" yazarak
+            linklerimize ulaşabilirsiniz! <br />
+            Eğer desteğe ihtiyacınız varsa "destek" yazarak yardım
+            alabilirsiniz.
+          </div>
         </div>
         <input type="text" id="user-input" placeholder="Mesajınızı yazın..." />
+      </div>
     </div>
-</div>
 
-
-<script src="scripts.js"></script>
-
-
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>

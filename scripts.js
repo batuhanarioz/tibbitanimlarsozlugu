@@ -103,6 +103,23 @@ document.getElementById("chatbox-close-btn").addEventListener("click", function(
     document.getElementById("chatbot-open-btn").classList.remove("hidden"); // Buton yazısını göster
 });
 
+document.querySelector(".search-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    gtag("event", "search_button_click", {
+        event_category: "Search",
+        event_label: searchBar.value.trim()
+    });
+});
+
+resultItem.addEventListener("click", () => {
+    gtag("event", "search_result_click", {
+        event_category: "Search",
+        event_label: item.kelime
+    });
+    showExplanation(item);
+});
+
+
 const messagesDiv = document.getElementById("chatbox-messages");
 const userInput = document.getElementById("user-input");
 
